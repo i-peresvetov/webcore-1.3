@@ -2,8 +2,7 @@
   font-family: "TTLakes";
   font-style: normal;
   font-weight: 400;
-  src: local("TTLakes-Regular"),
-    url("fonts/TTLakes-Regular.woff") format("woff");
+  src: local("TTLakes-Regular"), url("fonts/TTLakes-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -22,7 +21,6 @@
 
 html {
   box-sizing: border-box;
-  font-family: "TTLakes", Arial, sans-serif;
 }
 
 *,
@@ -43,6 +41,10 @@ a {
   color: black;
 }
 
+body {
+  font-family: "TTLakes", Arial, sans-serif;
+}
+
 /**************************
 **********ШАПКА************
 **************************/
@@ -54,6 +56,7 @@ a {
   width: 100%;
   padding: 18px 16px;
   z-index: 1;
+  box-shadow: #d9fff5 0 1px;
 }
 
 @media (min-width: 1120px) {
@@ -141,7 +144,7 @@ a {
   content: "";
   width: 2px;
   height: 32px;
-  border: 1px solid #eaeaea;  
+  border: 1px solid #eaeaea;
   border-radius: 1px;
   order: -1;
   margin: 0 20px;
@@ -196,6 +199,10 @@ a {
   background-image: url(img/chat.svg);
 }
 
+.menu__profile {
+  background-image: url(img/profile.svg);
+}
+
 .menu-link {
   height: 40px;
   width: 40px;
@@ -203,13 +210,19 @@ a {
 
 .menu-link__txt {
   display: none;
+  color: #1b1c21;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.2px;
 }
 
 @media (min-width: 1120px) {
   .menu-link__txt {
     display: inline;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 48px;
   }
 
   .menu-link {
@@ -219,9 +232,16 @@ a {
   }
 }
 
-.menu-link__img {
-  height: 100%;
-  width: 100%;
+.menu__check-status {
+  background-image: url(img/checkstatus.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.menu__repair {
+  background-image: url(img/repair.svg);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 /**************************
@@ -230,25 +250,24 @@ a {
 
 .content {
   padding: 112px 16px 0;
-  background-color: #f8f8f8;  
+  background-color: #f8f8f8;
 }
 
 @media (min-width: 768px) {
   .content {
-    padding: 112px 24px 0;
+    padding: 112px 24px 40px;
   }
 }
 
 @media (min-width: 1120px) {
   .content {
-    padding: 42px 34px 0;
+    padding: 42px 34px 50px;
   }
 }
 
 .page-name-container {
   color: #1b1c21;
-  font-family: TTLakes;
-  font-size: 28px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
@@ -302,7 +321,6 @@ a {
   display: flex;
   overflow: auto;
   white-space: nowrap;
-  
 }
 
 .content__page-content {
@@ -322,7 +340,6 @@ a {
     white-space: nowrap;
     flex-wrap: wrap;
     margin: 0 0 12px 0;
-    
   }
 
   .content__page-content {
@@ -333,7 +350,6 @@ a {
 .page-content a {
   padding: 8px 17px;
   color: #7e7e82;
-  font-family: TTLakes;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -388,13 +404,13 @@ a {
 
 .content__text-window {
   margin-bottom: 16px;
-  height: 6.42855em; /* 5 строк (128.571% * 5)*/
+  height: 90px;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .content__text-window {
-    height: 10.28568em; /* 8 строк (128.571% * 8)*/
+    height: 160px;
     margin-bottom: 10px;
   }
 }
@@ -407,14 +423,19 @@ a {
 }
 
 .content__text {
-  margin-bottom: 1.28571em;  
+  margin-bottom: 1.28571em;
   color: #1b1c21;
-  font-family: TTLakes;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 18px; /* 128.571% */
+}
+
+@media (min-width: 768px) {
+  .content__text {
+    line-height: 20px;
+  }
 }
 
 .content__text:last-child {
@@ -426,10 +447,10 @@ a {
 }
 
 .expand-button {
-  background-color: transparent;
-  border: 0;
   display: flex;
   align-items: center;
+  padding-left: 32px;
+  height: 24px;
   color: #1b1c21;
   font-family: TTLakes;
   font-size: 16px;
@@ -437,24 +458,24 @@ a {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: -0.2px;
-}
-
-.expand-button__img {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  background-image: url(img/expand.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: 0;
 }
 
 .content__photo {
-  padding-top: 66.666%;
-  width: 100%;  
+  padding-top: 50%;
+  width: 100%;
   background-image: url(img/cps_enter_logo_768.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-position: 0 50%;
 }
 
 @media (min-width: 768px) {
   .content__photo {
-    border-radius: 10px;
+    border-radius: 6px;
   }
 }
