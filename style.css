@@ -2,8 +2,7 @@
   font-family: "TTLakes";
   font-style: normal;
   font-weight: 400;
-  src: local("TTLakes-Regular"),
-    url("fonts/TTLakes-Regular.woff") format("woff");
+  src: local("TTLakes-Regular"), url("fonts/TTLakes-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -22,7 +21,6 @@
 
 html {
   box-sizing: border-box;
-  font-family: "TTLakes", Arial, sans-serif;
 }
 
 *,
@@ -43,6 +41,10 @@ a {
   color: black;
 }
 
+body {
+  font-family: "TTLakes", Arial, sans-serif;
+}
+
 /**************************
 **********ШАПКА************
 **************************/
@@ -54,6 +56,8 @@ a {
   width: 100%;
   padding: 18px 16px;
   z-index: 1;
+  /* box-shadow: #D9FFF5 0 1px; */
+  border-bottom: 1px solid #D9FFF5;
 }
 
 @media (min-width: 1120px) {
@@ -77,8 +81,8 @@ a {
   .menu__main-menu::after {
     content: "";
     width: 2px;
-    height: 32px;
-    border: 1px solid #eaeaea;
+    height: 32px;    
+    background-color: #eaeaea;
     border-radius: 1px;
     margin-left: 4px;
     margin-right: 20px;
@@ -140,8 +144,8 @@ a {
 .menu__side-menu::before {
   content: "";
   width: 2px;
-  height: 32px;
-  border: 1px solid #eaeaea;  
+  height: 32px;  
+  background-color: #eaeaea;
   border-radius: 1px;
   order: -1;
   margin: 0 20px;
@@ -189,7 +193,7 @@ a {
 }
 
 .menu__call {
-  background-image: url(img/call.svg);
+  background-image: url(img/call.svg);  
 }
 
 .menu__chat {
@@ -209,7 +213,7 @@ a {
   .menu-link__txt {
     display: inline;
     white-space: nowrap;
-    margin-right: 8px;
+    margin-right: 48px;
   }
 
   .menu-link {
@@ -219,9 +223,21 @@ a {
   }
 }
 
-.menu-link__img {
-  height: 100%;
-  width: 100%;
+.menu__profile {
+  background-image: url(img/profile.svg);
+}
+
+.menu__repair {
+  background-image: url(img/repair.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;  
+}
+
+.menu__check-status {
+  background-image: url(img/checkstatus.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  
 }
 
 /**************************
@@ -246,15 +262,15 @@ a {
 }
 
 .page-name-container {
-  color: #1b1c21;
-  font-family: TTLakes;
-  font-size: 28px;
-  font-style: normal;
+  color: #1B1C21;  
+  font-size: 28px;  
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.6px;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -0.6px;  
+  
   display: flex;
   align-items: center;
+  margin-right: -50px;
 }
 
 .content__page-name-container {
@@ -333,7 +349,6 @@ a {
 .page-content a {
   padding: 8px 17px;
   color: #7e7e82;
-  font-family: TTLakes;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -409,7 +424,6 @@ a {
 .content__text {
   margin-bottom: 1.28571em;  
   color: #1b1c21;
-  font-family: TTLakes;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -431,7 +445,6 @@ a {
   display: flex;
   align-items: center;
   color: #1b1c21;
-  font-family: TTLakes;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -445,16 +458,17 @@ a {
   margin-right: 8px;
 }
 
-.content__photo {
-  padding-top: 66.666%;
-  width: 100%;  
+.content__photo {  
+  padding-top: 50%;
+  width: 100%;
   background-image: url(img/cps_enter_logo_768.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-position: 0 50%;
 }
 
 @media (min-width: 768px) {
   .content__photo {
-    border-radius: 10px;
+    border-radius: 6px;
   }
 }
