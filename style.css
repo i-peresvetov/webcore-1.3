@@ -141,7 +141,7 @@ a {
   content: "";
   width: 2px;
   height: 32px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;  
   border-radius: 1px;
   order: -1;
   margin: 0 20px;
