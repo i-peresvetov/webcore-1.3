@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Услуги и ссервисы</title>
+    <title>Услуги и сервисы</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,62 +14,74 @@
           <a href="" class="menu__home logo"
             ><img src="img/logo.svg" alt="Логотип CPS" class="logo__img"
           /></a>
-          <div class="menu__devider devider"></div>
         </div>
         <div class="menu__side-menu">
-          <button class="menu__call menu-button"></button>
-          <button class="menu__chat menu-button"></button>
-          <a href="" class="menu__profile menu-link"><img src="img/profile.svg" alt="Профиль"></a>
+          <div class="menu__tablet-buttons">
+            <button class="menu__call menu-button"></button>
+            <button class="menu__chat menu-button"></button>
+            <a href="" class="menu__profile menu-link"
+              ><img src="img/profile.svg" alt="Профиль" class="menu-link__img"
+            /></a>
+          </div>
           <a href="" class="menu__repair menu-link"
+            ><span class="menu-link__txt">Оставить заявку</span
             ><img
               src="img/repair.svg"
-              alt="Услуги и сервисы"
+              alt="Оставить заявку"
               class="menu-link__img"
           /></a>
           <a href="" class="menu__check-status menu-link"
+            ><span class="menu-link__txt">Статус ремонта</span
             ><img
               src="img/checkstatus.svg"
-              alt="Проверить статус ремонта"
+              alt="Статус ремонта"
               class="menu-link__img"
           /></a>
         </div>
       </nav>
     </header>
-    <main class="services">
+    <main class="content">
       <article>
-        <div class="services__name-container">
-          <h1 class="services__name">Услуги и сервисы</h1>
+        <div class="content__page-name-container page-name-container">
+          <h1 class="content__page-name">Услуги и сервисы</h1>
         </div>
-        
-        <nav class="services__list">
-          <a href="#" class="active">Ремонтируемые устройства</a>
-          <a href="#">Дополнительные услуги</a>
-          <a href="#">Цены на услуги</a>
-          <a href="#">Специальные цены</a>
-          <a href="#">Адреса сервисных центров</a>
-          <a href="#">Отзывы</a>
-          <div class="services__list-fade"></div>
+        <nav class="content__page-content page-content">
+          <a href="#" class="page-content__element--active">Ремонтируемые устройства</a>
+          <a href="#" class="page-content__element">Дополнительные услуги</a>
+          <a href="#" class="page-content__element">Цены на услуги</a>
+          <a href="#" class="page-content__element">Специальные цены</a>
+          <a href="#" class="page-content__element">Адреса сервисных центров</a>
+          <a href="#" class="page-content__element">Отзывы</a>
+          <div class="page-content__fade"></div>
         </nav>
-        <div class="services__text-window">
-          <p class="services__text">
-            Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной
-            гарантией производителя. 
-          </p>
-          <p class="services__text">Мы успешно работаем с 1992 года и заслужили
-            репутацию надежного партнера, что подтверждает большое количество
-            постоянных клиентов. Мы гордимся тем, что к нам обращаются по
-            рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+
+
+
+        <div class="content__columns">
+          <div class="content__left-column">
+            <div class="content__text-window">
+              <p class="content__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <p class="content__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+            </div>
+            <button class="content__expand expand-button">
+              <img src="/img/expand.svg" class="expand-button__img" />Читать
+              далее
+            </button>
+          </div>
+          <div class="content__right-column">
+            <div class="content__photo"></div>
+          </div>
         </div>
       </article>
-      <button class="services__expand expand-button"><img src="/img/expand.svg" class="expand-button__img">Читать далее</button>
-      <div class="services__photo-container">
-        <img
-          src="img/cps_enter_logo.png"
-          alt="Фото вывески CPS"
-          class="services__photo"
-        />
-      </div>
     </main>
   </body>
 </html>
