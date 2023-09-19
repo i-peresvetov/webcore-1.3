@@ -45,6 +45,10 @@ body {
   font-family: "TTLakes", Arial, sans-serif;
 }
 
+body {
+  font-family: "TTLakes", Arial, sans-serif;
+}
+
 /**************************
 **********ШАПКА************
 **************************/
@@ -80,8 +84,8 @@ body {
   .menu__main-menu::after {
     content: "";
     width: 2px;
-    height: 32px;
-    border: 1px solid #eaeaea;
+    height: 32px;    
+    background-color: #eaeaea;
     border-radius: 1px;
     margin-left: 4px;
     margin-right: 20px;
@@ -143,8 +147,8 @@ body {
 .menu__side-menu::before {
   content: "";
   width: 2px;
-  height: 32px;
-  border: 1px solid #eaeaea;
+  height: 32px;  
+  background-color: #eaeaea;
   border-radius: 1px;
   order: -1;
   margin: 0 20px;
@@ -192,7 +196,7 @@ body {
 }
 
 .menu__call {
-  background-image: url(img/call.svg);
+  background-image: url(img/call.svg);  
 }
 
 .menu__chat {
@@ -222,6 +226,7 @@ body {
   .menu-link__txt {
     display: inline;
     white-space: nowrap;
+    margin-right: 48px;
     margin-right: 48px;
   }
 
@@ -270,10 +275,12 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.6px;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -0.6px;  
+  
   display: flex;
   align-items: center;
+  margin-right: -50px;
 }
 
 .content__page-name-container {
@@ -452,7 +459,6 @@ body {
   padding-left: 32px;
   height: 24px;
   color: #1b1c21;
-  font-family: TTLakes;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
