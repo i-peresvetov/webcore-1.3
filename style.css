@@ -71,47 +71,37 @@ body {
   justify-content: space-between;
 }
 
-.menu__main-menu {
+.menu__buttons-container {
   display: flex;
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .menu__main-menu::after {
-    content: "";
-    width: 2px;
-    height: 32px;
-    background-color: #eaeaea;
-    border-radius: 1px;
-    margin-left: 4px;
-    margin-right: 20px;
-  }
-}
-
-.menu__main-menu > * {
+.menu__main-menu-button {
   margin-right: 16px;
 }
 
-.menu__main-menu > *:last-child {
+.menu__main-menu-button:last-child {
   margin-right: 0;
 }
 
 @media (min-width: 768px) {
-  .menu__main-menu > * {
-    margin-right: 16px;
+  .menu__main-menu-button:nth-last-child(2) {
+    margin-right: 0;
   }
 }
 
-.menu__home {
-  order: 1;
+.menu__main-menu-button--main {
+  background-image: url(img/burger.svg);
 }
 
 .logo {
   height: 50px;
 }
 
-.logo__img {
-  height: 100%;
+@media (min-width: 768px) {
+  .menu__main-menu-button--home {
+    order: 1;
+  }
 }
 
 .menu-button {
@@ -122,85 +112,73 @@ body {
   border-radius: 50%;
 }
 
-.menu__main-menu-button {
-  background-image: url(img/burger.svg);
-}
-
-.menu__side-menu {
-  display: flex;
-  align-items: center;
-}
-
-@media (min-width: 1120px) {
-  .menu__side-menu {
-    visibility: visible;
-    position: absolute;
-    top: 42px;
-    right: 32px;
-  }
-}
-
-.menu__side-menu::before {
-  content: "";
-  width: 2px;
-  height: 32px;
-  background-color: #eaeaea;
-  border-radius: 1px;
-  order: -1;
-  margin: 0 20px;
-}
-
-@media (min-width: 1120px) {
-  .menu__side-menu::before {
-    content: none;
-  }
-}
-
-.menu__side-menu > * {
+.menu__side-element {
   margin-right: 16px;
 }
 
 @media (min-width: 1120px) {
-  .menu__side-menu > * {
+  .menu__side-element {
     margin-right: 32px;
   }
 }
 
-.menu__side-menu > *:first-child,
-.menu__side-menu > *:last-child {
+.menu__side-element:first-child,
+.menu__side-element:last-child {
   margin-right: 0;
 }
 
-.menu__tablet-buttons {
-  display: none;
-  order: -2;
-}
-
-@media (min-width: 768px) and (max-width: 1120px) {
-  .menu__tablet-buttons {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.menu__tablet-buttons > * {
+.menu__tablet-button {
   margin-right: 16px;
 }
 
-.menu__tablet-buttons > *:last-child {
+.menu__tablet-button:last-child {
   margin-right: 0;
 }
 
-.menu__call {
+.menu__side-element--tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .menu__side-element--tablet {
+    display: flex;
+    align-items: center;
+    order: -2;
+  }
+}
+
+@media (min-width: 1120px) {
+.menu__buttons-container--side {
+visibility: visible;
+position: absolute;
+top: 42px;
+right: 32px;
+}
+}
+
+.menu__tablet-button--call {
   background-image: url(img/call.svg);
 }
 
-.menu__chat {
+.menu__tablet-button--chat {
   background-image: url(img/chat.svg);
 }
 
-.menu__profile {
+.menu__tablet-button--profile {
   background-image: url(img/profile.svg);
+}
+
+.menu__side-element {
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.menu__side-element--repair {
+  background-image: url(img/repair.svg);
+}
+
+.menu__side-element--status {
+  background-image: url(img/checkstatus.svg);
 }
 
 .menu-link {
@@ -214,7 +192,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
   letter-spacing: -0.2px;
 }
 
@@ -233,16 +211,28 @@ body {
   }
 }
 
-.menu__check-status {
-  background-image: url(img/checkstatus.svg);
-  background-repeat: no-repeat;
-  background-position: right;
+.menu__buttons-container::after {
+  content: "";
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  border-radius: 1px;
+  margin: 0 16px;  
 }
 
-.menu__repair {
-  background-image: url(img/repair.svg);
-  background-repeat: no-repeat;
-  background-position: right;
+.menu__buttons-container--side::after {
+  content: none;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .menu__buttons-container::after {
+    margin: 0 20px;
+  }
+
+  .menu__buttons-container--side::after {
+    content: "";
+    order: -1;    
+  }
 }
 
 /**************************

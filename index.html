@@ -9,22 +9,18 @@
   <body>
     <header class="header">
       <nav class="menu">
-        <div class="menu__main-menu">
-          <button class="menu__main-menu-button menu-button"></button>
-          <a href="" class="menu__home logo"><img src="img/logo.svg" alt="Логотип CPS" class="logo__img"/></a>
+        <div class="menu__buttons-container menu__buttons-container--main">
+          <button class="menu__main-menu-button menu__main-menu-button--main menu-button"></button>
+          <a href="" class="menu__main-menu-button menu__main-menu-button--home logo"><img src="img/logo.svg" alt="Логотип CPS"/></a>
         </div>
-        <div class="menu__side-menu">
-          <div class="menu__tablet-buttons">
-            <button class="menu__call menu-button"></button>
-            <button class="menu__chat menu-button"></button>
-            <a href="" class="menu__profile menu-link"></a>
+        <div class="menu__buttons-container menu__buttons-container--side">
+          <div class="menu__side-element menu__side-element--tablet">
+            <button class="menu__tablet-button menu__tablet-button--call menu-button"></button>
+            <button class="menu__tablet-button menu__tablet-button--chat menu-button"></button>
+            <a href="" class="menu__tablet-button menu__tablet-button--profile menu-button"></a>
           </div>
-          <a href="" class="menu__repair menu-link"
-            ><span class="menu-link__txt">Оставить заявку</span></a
-          >
-          <a href="" class="menu__check-status menu-link"
-            ><span class="menu-link__txt">Статус ремонта</span></a
-          >
+          <a href="" class="menu__side-element menu__side-element--repair menu-link"><span class="menu-link__txt">Оставить заявку</span></a>
+          <a href="" class="menu__side-element menu__side-element--status menu-link"><span class="menu-link__txt">Статус ремонта</span></a>
         </div>
       </nav>
     </header>
@@ -34,9 +30,7 @@
           <h1 class="content__page-name">Услуги и сервисы</h1>
         </div>
         <nav class="content__page-content page-content">
-          <a href="#" class="page-content__element--active"
-            >Ремонтируемые устройства</a
-          >
+          <a href="#" class="page-content__element page-content__element--active">Ремонтируемые устройства</a>
           <a href="#" class="page-content__element">Ремонтируемые бренды</a>
           <a href="#" class="page-content__element">Дополнительные услуги</a>
           <a href="#" class="page-content__element">Цены на услуги</a>
